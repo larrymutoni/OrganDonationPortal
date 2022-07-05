@@ -7,6 +7,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginHospitalsController;
+use App\Http\Controllers\RegisterHospitalsController;
+use App\Http\Controllers\RegistrationDonorsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +34,6 @@ Route::get('/event', [EventController::class, 'index']);
 Route::get('/donate', [DonateController::class, 'index']);
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/register', [RegistrationDonorsController::class, 'index']);
+Route::get('/loginHospitals', [LoginHospitalsController::class, 'index']);
+Route::get('/hospitalRegister', [RegisterHospitalsController::class, 'index']);

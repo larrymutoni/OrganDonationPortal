@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Donate Now</h2>
+                        <h2>Hospitals Registration</h2>
                     </div>
                     <div class="col-12">
                         <a href="">Home</a>
@@ -115,7 +115,7 @@
                     <div class="col-lg-7">
                         <div class="donate-content">
                             <div class="section-header">
-                                <p>Donor Now</p>
+                                <p>Hospitals Registration</p>
                                 <h2>Let's donate to needy people for better lives</h2>
                             </div>
                             <div class="donate-text">
@@ -128,41 +128,26 @@
                     <div class="col-lg-5">
                         <div class="donate-form">
                             <form>
-                                {{-- <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
-                                </div> --}}
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="text" class="form-control" placeholder="Hospital Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="required" />
+                                    <input type="text" class="form-control" placeholder="To be Modified" required="required" />
                                 </div>
-                                {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-custom active">
-                                        <input type="radio" name="options" checked> $10
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $20
-                                    </label>
-                                    <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $30
-                                    </label>
-                                </div> --}}
-                                <div>
-                                    <button class="btn btn-custom" type="submit">Login</button>
+                                <div class="control-group">
+                                    <input type="email" class="form-control" placeholder="To be Modified" required="required" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="email" class="form-control" placeholder="To be Modified" required="required" />
                                 </div>
                                 
-                                {{-- <div>
-                                    <button class="btn btn-custom" type="submit">Or Register</button>
-                                </div> --}}
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Register</button>
+                                </div>
                             </form>
                             <p></p>
                             <div>
-                                <a href="/loginHospitals"><button class="btn btn-custom" type="text">Click Here --- For Login (Hospitals Only)</button></a>
-                            </div>
-                            <p></p>
-                            <div>
-                                <a href="/register"><button class="btn btn-custom" type="text">Click Here To Register</button></a>
+                                <a href="/loginHospitals"><button class="btn btn-custom" type="text">Click Here --- To Login(Hospitals Only)</button></a>
                             </div>
                         </div>
                     </div>
