@@ -66,12 +66,13 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/causes" class="nav-item nav-link">Causes</a>
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
                         <a href="/donate" class="nav-item nav-link">Donate</a>
+                        <a href="/donate" class="nav-item nav-link">Login</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">

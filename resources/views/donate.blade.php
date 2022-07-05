@@ -66,12 +66,13 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/causes" class="nav-item nav-link">Causes</a>
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
                         <a href="/donate" class="nav-item nav-link">Donate</a>
+                        <a href="/donate" class="nav-item nav-link">Login</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
@@ -127,11 +128,14 @@
                     <div class="col-lg-5">
                         <div class="donate-form">
                             <form>
-                                <div class="control-group">
+                                {{-- <div class="control-group">
                                     <input type="text" class="form-control" placeholder="Name" required="required" />
-                                </div>
+                                </div> --}}
                                 <div class="control-group">
                                     <input type="email" class="form-control" placeholder="Email" required="required" />
+                                </div>
+                                <div class="control-group">
+                                    <input type="password" class="form-control" placeholder="Password" required="required" />
                                 </div>
                                 {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
@@ -145,9 +149,17 @@
                                     </label>
                                 </div> --}}
                                 <div>
-                                    <button class="btn btn-custom" type="submit">Login / Register</button>
+                                    <button class="btn btn-custom" type="submit">Login</button>
                                 </div>
+                                
+                                {{-- <div>
+                                    <button class="btn btn-custom" type="submit">Or Register</button>
+                                </div> --}}
                             </form>
+                            <p></p>
+                            <div>
+                                <button class="btn btn-custom" type="submit">Register</button>
+                            </div>
                         </div>
                     </div>
                 </div>
