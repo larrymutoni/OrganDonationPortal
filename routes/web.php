@@ -33,7 +33,7 @@ Route::get('/home', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/causes', [CausesController::class, 'index']);
 Route::get('/event', [EventController::class, 'index']);
-Route::get('/donate', [DonateController::class, 'index']);
+Route::get('/donate', [DonateController::class, 'index'])->middleware('alreadyLoggedIn');
 Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/register', [RegistrationDonorsController::class, 'index']);
@@ -43,26 +43,9 @@ Route::get('/hospitalRegister', [RegisterHospitalsController::class, 'index']);
 Route::POST('/Createreg', [RegistrationDonorsController::class, 'create']);
 Route::POST('/login', [DonateController::class, 'login']);
 Route::get('profile', [DashboardController::class, 'index']);
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('isLoggedIn');
 Route::get('/donateform', [DonateController::class, 'index2']);
 Route::get('logout', function () {
     session()->flush();
     return redirect('home');
 });
-
-// Routes for pratice
-// Route::view('/essaielogin', [EssaieController::class, 'essaie']);
-// Route::post('user', [EssaieController::class, 'login']);
-// Route::view('profile', 'profile');
-// Route::get('/essaielogin', function () {
-//     if (session()->has('user')) {
-//         return redirect('profile');
-//     }
-//     return view('essaie');
-// });
-// Route::get('/logout', function () {
-//     if (session()->has('user')) {
-//         session()->pull('user');
-//     }
-//     return view('essaie');
-// });
