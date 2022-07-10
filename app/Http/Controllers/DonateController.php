@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class DonateController extends Controller
 {
@@ -16,6 +18,11 @@ class DonateController extends Controller
         return view('donate');
     }
 
+    public function index2()
+    {
+        return view('pages.forms.donateform');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -25,6 +32,29 @@ class DonateController extends Controller
     {
         //
     }
+
+    public function login(Request $req)
+    {
+        $user = User::where('email', '=', $req->email)->first();
+        if ($user) {
+            if (Hash::check($req->password, $user->password)) {
+                $req->session()->put('id', $user->UserId);
+                return redirect('profile');
+            } else {
+                return back()->with('fail', 'Passwords do not match');
+            }
+        } else {
+            return view('donate');
+        }
+    }
+    // public function profile()
+    // {
+    //     $data = array();
+    //     if (Session::has('id')) {
+    //         $data = User::where('id', '=', Session::get('id'))->first();
+    //     }
+    //     return view('profile', compact("data"));
+    // }
 
     /**
      * Store a newly created resource in storage.

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>HELPZ - Free Charity Website Template</title>
+        <title>KODP - Kenya Organ Donation Portal</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -33,7 +33,7 @@
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <p>+123 456 7890</p>
+                                <p>+254000000</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-envelope"></i>
@@ -59,7 +59,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Helpz</a>
+                <a href="index.html" class="navbar-brand">K O D P</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -68,7 +68,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
-                        <a href="/causes" class="nav-item nav-link">Causes</a>
+                        {{-- <a href="/causes" class="nav-item nav-link">Causes</a> --}}
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
                         <a href="/donate" class="nav-item nav-link">Donate</a>
@@ -127,26 +127,38 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
-                            <form>
+                            {{-- @if ($errors->any())
+                                @foreach ($errors->all() as $err)
+                                    <li>{{ $err }}</li>
+                                @endforeach
+                            @endif --}}
+                            <form action="Createreg" method="POST">
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="First Name" required="required" />
+                                    <input type="text" class="form-control" name="fname" placeholder="First Name"  />
+                                    <div class="alert-danger">{{ $errors->first('fname') }}</div>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" required="required" />
+                                    <input type="text" class="form-control" name="lname" placeholder="Last Name"  />
+                                    <div class="alert-danger">{{ $errors->first('lname') }}</div>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" name="email" placeholder="Email" />
+                                    <div class="alert-danger">{{ $errors->first('email') }}</div>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Confirm Email" required="required" />
+                                    <input type="email" class="form-control" name="confEmail" placeholder="Confirm Email"  />
+                                    <div class="alert-danger">{{ $errors->first('confEmail') }}</div>
                                 </div>
 
                                 <div class="control-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="required" />
+                                    <input type="password" class="form-control" name="password" placeholder="Password"  />
+                                    <div class="alert-danger">{{ $errors->first('password') }}</div>
                                 </div>
 
                                 <div class="control-group">
-                                    <input type="password" class="form-control" placeholder="Confirm Password" required="required" />
+                                    <input type="password" class="form-control" name="confPassword" placeholder="Confirm Password"  />
+                                    <div class="alert-danger">{{ $errors->first('confPassword') }}</div>
                                 </div>
                                 
                                 <div>

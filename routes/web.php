@@ -4,7 +4,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CausesController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\EssaieController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginHospitalsController;
@@ -37,3 +39,26 @@ Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/register', [RegistrationDonorsController::class, 'index']);
 Route::get('/loginHospitals', [LoginHospitalsController::class, 'index']);
 Route::get('/hospitalRegister', [RegisterHospitalsController::class, 'index']);
+
+Route::POST('/Createreg', [RegistrationDonorsController::class, 'create']);
+Route::POST('/login', [DonateController::class, 'login']);
+Route::get('profile', [EssaieController::class, 'profile']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/donateform', [DonateController::class, 'index2']);
+
+// Routes for pratice
+// Route::view('/essaielogin', [EssaieController::class, 'essaie']);
+// Route::post('user', [EssaieController::class, 'login']);
+// Route::view('profile', 'profile');
+// Route::get('/essaielogin', function () {
+//     if (session()->has('user')) {
+//         return redirect('profile');
+//     }
+//     return view('essaie');
+// });
+// Route::get('/logout', function () {
+//     if (session()->has('user')) {
+//         session()->pull('user');
+//     }
+//     return view('essaie');
+// });

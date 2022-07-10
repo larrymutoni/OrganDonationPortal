@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>HELPZ - Free Charity Website Template</title>
+        <title>KODP - Kenya Organ Donation Portal</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -33,7 +33,7 @@
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <p>+123 456 7890</p>
+                                <p>+254000000</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-envelope"></i>
@@ -59,7 +59,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Helpz</a>
+                <a href="index.html" class="navbar-brand">K O D P</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -68,7 +68,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
-                        <a href="/causes" class="nav-item nav-link">Causes</a>
+                        {{-- <a href="/causes" class="nav-item nav-link">Causes</a> --}}
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
                         <a href="/donate" class="nav-item nav-link">Donate</a>

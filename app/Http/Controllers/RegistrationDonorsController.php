@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\UsersModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegistrationDonorsController extends Controller
 {
@@ -21,9 +24,26 @@ class RegistrationDonorsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        $req->validate([
+            'fname' => 'required',
+            'lname' => 'required',
+            'email' => 'required',
+            'confEmail' => 'same:email',
+            'password' => 'required | min:6',
+            'confPassword' => 'same:password'
+        ]);
+
+        $member = new User();
+        $member->firstname = $req->fname;
+        $member->lastname = $req->lname;
+        $member->email = $req->email;
+        $member->password = Hash::make($req->password);
+        $member->save();
+
+        return redirect()->route('/home')
+            ->with('Welcome');
     }
 
     /**

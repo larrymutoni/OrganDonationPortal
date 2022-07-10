@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>HELPZ - Free Charity Website Template</title>
+        <title>KODP - Kenya Organ Donation Portal</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -33,11 +33,11 @@
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <p>+123 456 7890</p>
+                                <p>+254000000</p>
                             </div>
                             <div class="text">
                                 <i class="fa fa-envelope"></i>
-                                <p>info@example.com</p>
+                                <p>@strathmore.edu </p>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Helpz</a>
+                <a href="index.html" class="navbar-brand">K O D P</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -68,7 +68,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="/home" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
-                        <a href="/causes" class="nav-item nav-link">Causes</a>
+                        {{-- <a href="/causes" class="nav-item nav-link">Causes</a> --}}
                         <a href="/event" class="nav-item nav-link">Events</a>
                         <a href="/blog" class="nav-item nav-link">Blog</a>
                         <a href="/donate" class="nav-item nav-link">Donate</a>
@@ -97,46 +97,46 @@
                 <div class="owl-carousel">
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-1.jpg" alt="Image">
+                            <img src="img/organs3.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Let's be kind for children</h1>
+                            <h1>Let's be kind</h1>
                             <p>
-                                Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                                Organ donation is a generous, selfless gift
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-2.jpg" alt="Image">
+                            <img src="img/organs5.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Get Involved with helping hand</h1>
+                            <h1>Get Involved with helping Heart</h1>
                             <p>
-                                Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
+                                The donor’s legacy lives on when someone gets a second chance at life.
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-3.jpg" alt="Image">
+                            <img src="img/kidsmiling.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Bringing smiles to millions</h1>
                             <p>
-                                Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
+                                Every donor can save 8 lives and enhance over 75 more. You Can Help.
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                     <div class="col-lg-6">
                         <div class="section-header">
                             <p>Learn About Us</p>
-                            <h2>Worldwide non-profit charity organization</h2>
+                            <h2>Kenyan Organ Donation Portal</h2>
                         </div>
                         <div class="about-tab">
                             <ul class="nav nav-pills nav-justified">
@@ -191,13 +191,15 @@
 
                             <div class="tab-content">
                                 <div id="tab-content-1" class="container tab-pane active">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vitae pellentesque turpis. Donec in hendrerit dui, vel blandit massa. Ut vestibulum suscipit cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget velit luctus dictum. Phasellus et felis sed purus tristique dignissim. Morbi sit amet leo at purus accumsan pellentesque. Vivamus fermentum nisi vel dapibus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Each day, 17 people die waiting for a lifesaving organ transplant and a new name is added to the transplant waiting list every 9 minutes. Together with our partners, donor families, and the community we work towards one goal – that no one dies waiting.<br>
+
+                                    Join those who have checked the box “Yes” already. 
                                 </div>
                                 <div id="tab-content-2" class="container tab-pane fade">
-                                    Sed tincidunt, magna ut vehicula volutpat, turpis diam condimentum justo, posuere congue turpis massa in mi. Proin ornare at massa at fermentum. Nunc aliquet sed nisi iaculis ornare. Nam semper tortor eget est egestas, eu sagittis nunc sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent bibendum sapien sed purus molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    'Not Everyone Has The Chance To Be God For Another; You Do'
                                 </div>
                                 <div id="tab-content-3" class="container tab-pane fade">
-                                    Aliquam dolor odio, mollis sed feugiat sit amet, feugiat ut sapien. Nunc eu dignissim lorem. Suspendisse at hendrerit enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed condimentum semper turpis vel facilisis. Nunc vel faucibus orci. Mauris ut mauris rhoncus, efficitur nisi at, venenatis quam. Praesent egestas pretium enim sit amet finibus. Curabitur at erat molestie, tincidunt lorem eget, consequat ligula.
+                                    Our Vision is to promote long, healthy and productive lives for persons with organ failure by promoting maximized organ supply, effective and safe care, and equitable organ allocation and access to transplantation; and doing so by balancing competing goals in ways that are transparent, inclusive, and enhance public trust in the national organ donation system.
                                 </div>
                             </div>
                         </div>
@@ -296,8 +298,8 @@
                         <div class="facts-item">
                             <i class="flaticon-home"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">150</h3>
-                                <p>Countries</p>
+                                <h3 class="facts-plus" data-toggle="counter-up">17</h3>
+                                <p>PEOPLE DIE EACH DAY WAITING FOR AN ORGAN TRANSPLANT</p>
                             </div>
                         </div>
                     </div>
@@ -305,8 +307,8 @@
                         <div class="facts-item">
                             <i class="flaticon-charity"></i>
                             <div class="facts-text">
-                                <h3 class="facts-plus" data-toggle="counter-up">400</h3>
-                                <p>Volunteers</p>
+                                <h3 class="" data-toggle="counter-up">8</h3>
+                                <p>1 DONOR CAN SAVE UP TO 8 LIVES THROUGH ORGAN DONATION</p>
                             </div>
                         </div>
                     </div>
@@ -314,12 +316,12 @@
                         <div class="facts-item">
                             <i class="flaticon-kindness"></i>
                             <div class="facts-text">
-                                <h3 class="facts-dollar" data-toggle="counter-up">10000</h3>
-                                <p>Our Goal</p>
+                                <h3 class="" data-toggle="counter-up">75</h3>
+                                <p>1 DONOR CAN HEAL MORE THAN 75 LIVES THROUGH EYE AND TISSUE DONATION</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    {{-- <div class="col-lg-3 col-md-6">
                         <div class="facts-item">
                             <i class="flaticon-donation"></i>
                             <div class="facts-text">
@@ -327,7 +329,7 @@
                                 <p>Raised</p>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -335,7 +337,7 @@
         
         
         <!-- Causes Start -->
-        <div class="causes">
+        {{-- <div class="causes">
             <div class="container">
                 <div class="section-header text-center">
                     <p>Popular Causes</p>
@@ -440,7 +442,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Causes End -->
         
         
