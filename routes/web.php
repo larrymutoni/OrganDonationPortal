@@ -42,9 +42,13 @@ Route::get('/hospitalRegister', [RegisterHospitalsController::class, 'index']);
 
 Route::POST('/Createreg', [RegistrationDonorsController::class, 'create']);
 Route::POST('/login', [DonateController::class, 'login']);
-Route::get('profile', [EssaieController::class, 'profile']);
+Route::get('profile', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/donateform', [DonateController::class, 'index2']);
+Route::get('logout', function () {
+    session()->flush();
+    return redirect('home');
+});
 
 // Routes for pratice
 // Route::view('/essaielogin', [EssaieController::class, 'essaie']);

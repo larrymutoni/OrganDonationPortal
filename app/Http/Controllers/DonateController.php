@@ -39,6 +39,9 @@ class DonateController extends Controller
         if ($user) {
             if (Hash::check($req->password, $user->password)) {
                 $req->session()->put('id', $user->UserId);
+                $req->session()->put('firstname', $user->firstname);
+                $req->session()->put('lastname', $user->lastname);
+                $req->session()->put('email', $user->email);
                 return redirect('profile');
             } else {
                 return back()->with('fail', 'Passwords do not match');
@@ -47,14 +50,10 @@ class DonateController extends Controller
             return view('donate');
         }
     }
-    // public function profile()
-    // {
-    //     $data = array();
-    //     if (Session::has('id')) {
-    //         $data = User::where('id', '=', Session::get('id'))->first();
-    //     }
-    //     return view('profile', compact("data"));
-    // }
+    
+    public function logout(){
+
+    }
 
     /**
      * Store a newly created resource in storage.
