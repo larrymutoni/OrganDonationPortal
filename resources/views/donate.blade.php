@@ -127,6 +127,9 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
+                            @if (session()->has('status'))
+                                <div class="text" color="green">{{ session()->get('status') }}</div>
+                            @endif
                             <form action="login" method="POST">
                                 @csrf
                                 <div class="control-group">

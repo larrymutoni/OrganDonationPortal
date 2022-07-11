@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donor;
+use App\Models\DonorModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -44,15 +46,15 @@ class DonateController extends Controller
                 $req->session()->put('email', $user->email);
                 return redirect('profile');
             } else {
-                return back()->with('fail', 'Passwords do not match');
+                return back()->with('status', 'Passwords do not match');
             }
         } else {
             return view('donate');
         }
     }
-    
-    public function logout(){
 
+    public function logout()
+    {
     }
 
     /**
@@ -63,7 +65,26 @@ class DonateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $Donor = new Donor();
+        $Donor->firstname = $request->fname;
+        $Donor->lastname = $request->lname;
+        $Donor->email = $request->email;
+        $Donor->gender = $request->gender;
+        $Donor->dob = $request->dob;
+        $Donor->bloodtype = $request->bloodtype;
+        $Donor->infectiousDiseases = $request->choice;
+        $Donor->donationtype = $request->donationtype;
+        $Donor->height = $request->height;
+        $Donor->organtype = $request->organtype;
+        $Donor->address1 = $request->address1;
+        $Donor->address2 = $request->address2;
+        $Donor->state = $request->state;
+        $Donor->phonenumber = $request->phonenumber;
+        $Donor->postalcode = $request->postalcode;
+        $Donor->city = $request->city;
+        $Donor->country = $request->country;
+        $Donor->save();
+        return redirect('donateform')->with('status', 'Submitted Successfully');
     }
 
     /**

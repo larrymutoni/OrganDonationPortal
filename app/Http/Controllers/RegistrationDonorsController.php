@@ -42,8 +42,7 @@ class RegistrationDonorsController extends Controller
         $member->password = Hash::make($req->password);
         $member->save();
 
-        return redirect()->route('/home')
-            ->with('Welcome');
+        return redirect('donate')->with('Status', 'Created Successfully! Please Login');
     }
 
     /**

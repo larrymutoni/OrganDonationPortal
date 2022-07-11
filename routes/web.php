@@ -45,6 +45,9 @@ Route::POST('/login', [DonateController::class, 'login']);
 Route::get('profile', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('isLoggedIn');
 Route::get('/donateform', [DonateController::class, 'index2']);
+Route::POST('/donateregistration', [DonateController::class, 'store']);
+
+
 Route::get('logout', function () {
     session()->flush();
     return redirect('home');
