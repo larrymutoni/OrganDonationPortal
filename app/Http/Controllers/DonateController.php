@@ -7,6 +7,7 @@ use App\Models\DonorModel;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class DonateController extends Controller
 {
@@ -84,7 +85,7 @@ class DonateController extends Controller
         $Donor->city = $request->city;
         $Donor->country = $request->country;
         $Donor->save();
-        return redirect('donateform')->with('status', 'Submitted Successfully');
+        return redirect('showSubmitted')->with('status', 'Application Submitted Successfully');
     }
 
     /**
@@ -93,9 +94,15 @@ class DonateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $applications = new Donor();
+
+        $em = session('email');
+        // $emm = Donor::find($em);
+        // $applications = DB::table('donors')->get();
+        $applications = Donor::where('email', $em)->get();
+        return view('pages.tables.submittedappli', ['data' => $applications]);
     }
 
     /**
@@ -104,9 +111,40 @@ class DonateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $id = $request->id;
+
+        $fname = $request->input('fname');
+        $lname = $request->input('lname');
+        $email = $request->input('email');
+        $gender = $request->input('gender');
+        $dob = $request->input('dob');
+        $bloodtype = $request->input('bloodtype');
+        $infectiousDiseases = $request->input('choice');
+        $donationtype = $request->input('donationtype');
+        $height = $request->input('height');
+        $organtype = $request->input('organtype');
+        $address1 = $request->input('address1');
+        $state = $request->input('state');
+        $address2 = $request->input('address2');
+        $phonenumber = $request->input('phonenumber');
+        $postalcode = $request->input('postalcode');
+        $city = $request->input('city');
+        $country = $request->input('country');
+
+        $isUpdateSuccess = Donor::where('DonorDId', $id)->update([
+            'firstname' => $fname, 'lastname' => $lname, 'email' => $email,
+            'gender' => $gender, 'dob' => $dob, 'bloodtype' => $bloodtype, 'infectiousDiseases' => $infectiousDiseases, 'donationtype' => $donationtype,
+            'height' => $height, 'organtype' => $organtype, 'address1' => $address1, 'state' => $state, 'address2' => $address2, 'phonenumber' => $phonenumber,
+            'postalcode' => $postalcode, 'city' => $city, 'country' => $country
+        ]);
+
+        if ($isUpdateSuccess) {
+            return redirect('showSubmitted')->with('status', 'Data Successfully Updated! ');
+        } else {
+            return redirect('showSubmitted')->with('status', 'Failed To update! ');
+        }
     }
 
     /**
@@ -118,7 +156,11 @@ class DonateController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // return $id;
+        $updateData = Donor::where('DonorDId', $id)->get();
+        // return $updateData;
+
+        return view('pages.forms.editdonateform', ['editdata' => $updateData]);
     }
 
     /**
@@ -129,6 +171,13 @@ class DonateController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // return $id;
+        $isDeleteSuccess = Donor::where('DonorDId', $id)->delete();
+
+        if ($isDeleteSuccess) {
+            return redirect('showSubmitted')->with('status', 'Application Withdrawn Successfully');
+        } else {
+            return redirect('showSubmitted')->with('status', 'Failed To Withdraw the Application, Try Later.');
+        }
     }
 }

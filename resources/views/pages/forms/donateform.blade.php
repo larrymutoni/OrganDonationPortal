@@ -103,7 +103,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 {{-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Donate</a></li> --}}
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Submitted Application</a></li>
+                <li class="nav-item"> <a class="nav-link" href="showSubmitted">Submitted Application</a></li>
                 {{-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li> --}}
               </ul>
             </div>
@@ -471,7 +471,7 @@
                               <select class="form-control" name="donationtype">
                                 <option >Select</option>
                                 <option value="Living Donation">Living Donation</option>
-                                <option value="Deceased Donation">Deceased Donation</option>
+                                {{-- <option value="Deceased Donation">Deceased Donation</option> --}}
                                 <option value="Tissue Donation">Tissue Donation</option>
                                 <option value="Vascularized Composite Allografts (VCA)">Vascularized Composite Allografts (VCA)</option>
                                 <option value="Pedriatic Donation">Pedriatic Donation</option>
@@ -490,11 +490,12 @@
                         
                       </div>
                       <div class="form-group row">
-                        <label class="col-sm-3 col-form-label">Transplantable Organs (Details and conditions in the documentation page)</label>
+                        <label class="col-sm-3 col-form-label">Which Organ Do you wish to donate? <a href="#">(Details)</a> </label>
                         <div class="col-sm-9">
                           <select class="form-control" name="organtype">
                             <option>Select</option>
                             <option>Choose Later</option>
+                            <option value="Connective tissue">Any</option>
                             <option value="Liver">Liver</option>
                             <option value="Kidney">Kidney</option>
                             <option value="Pancreas">Pancreas</option>

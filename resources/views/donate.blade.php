@@ -120,7 +120,7 @@
                             </div>
                             <div class="donate-text">
                                 <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non. Aliquam metus tortor, auctor id gravida, viverra quis sem. Curabitur non nisl nec nisi maximus. Aenean convallis porttitor. Aliquam interdum at lacus non blandit.
+                                    One step to give hope.
                                 </p>
                             </div>
                         </div>

@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Submitted Application</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
@@ -21,7 +21,7 @@
   <body>
     <div class="container-scroller">
       <!-- partial:../../partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      {{-- <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
           <a class="sidebar-brand brand-logo" href="../../index.html"><img src="../../assets/images/logo.svg" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="../../index.html"><img src="../../assets/images/logo-mini.svg" alt="logo" /></a>
@@ -162,6 +162,141 @@
             </a>
           </li>
         </ul>
+      </nav> --}}
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        {{-- <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div> --}}
+        <ul class="nav">
+          <li class="nav-item profile">
+            <div class="profile-desc">
+              <div class="profile-pic">
+                <div class="count-indicator">
+                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                  <span class="count bg-success"></span>
+                </div>
+                <div class="profile-name">
+                  <h5 class="mb-0 font-weight-normal">{{ session('firstname') }} {{ session('lastname') }} </h5>
+                  {{-- <span>Gold Member</span> --}}
+                  <span></span>
+                </div>
+              </div>
+              <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+              <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-onepassword  text-info"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="logout" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar-today text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Log Out</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="profile">
+              <span class="menu-icon">
+                <i class="mdi mdi-speedometer"></i>
+              </span>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Profile</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                {{-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Donate</a></li> --}}
+                <li class="nav-item"> <a class="nav-link" href="showSubmitted">Submitted Application</a></li>
+                {{-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li> --}}
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="donateform">
+              <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+              </span>
+              <span class="menu-title">Donate</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Events</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="pages/icons/mdi.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-contacts"></i>
+              </span>
+              <span class="menu-title">Blog</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <span class="menu-icon">
+                <i class="mdi mdi-security"></i>
+              </span>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Report</span>
+            </a>
+          </li>
+        </ul>
       </nav>
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
@@ -181,7 +316,7 @@
                 </form>
               </li>
             </ul>
-            <ul class="navbar-nav navbar-nav-right">
+            {{-- <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
@@ -352,7 +487,7 @@
                   <p class="p-3 mb-0 text-center">Advanced settings</p>
                 </div>
               </li>
-            </ul>
+            </ul> --}}
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
               <span class="mdi mdi-format-line-spacing"></span>
             </button>
@@ -362,16 +497,16 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"> Basic Tables </h3>
-              <nav aria-label="breadcrumb">
+              <h3 class="page-title"> Submitted Application </h3>
+              {{-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Tables</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
-                </ol>
+                </ol> --}}
               </nav>
             </div>
             <div class="row">
-              <div class="col-lg-6 grid-margin stretch-card">
+              {{-- <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Basic Table</h4>
@@ -423,8 +558,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-6 grid-margin stretch-card">
+              </div> --}}
+              {{-- <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Hoverable Table</h4>
@@ -476,8 +611,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-12 grid-margin stretch-card">
+              </div> --}}
+              {{-- <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Striped Table</h4>
@@ -591,8 +726,8 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-12 grid-margin stretch-card">
+              </div> --}}
+              {{-- <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Bordered table</h4>
@@ -692,73 +827,52 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Inverse table</h4>
-                    <p class="card-description"> Add class <code>.table-dark</code>
+                    <h4 class="card-title">More infos on view details</h4>
+                    @if (session()->has('status'))
+                                <div class="text-success" color="green">{{ session()->get('status') }}</div>
+                            @endif
+                    {{-- <p class="card-description"> Add class <code>.table-dark</code> --}}
+                     <p class="card-description"> Click Here To Apply <code><a class="badge badge-danger " href="">Apply</a></code>
                     </p>
                     <div class="table-responsive">
                       <table class="table table-dark">
                         <thead>
                           <tr>
-                            <th> # </th>
+                            <th> Donation ID </th>
                             <th> First name </th>
-                            <th> Amount </th>
-                            <th> Deadline </th>
+                            <th> Last name </th>
+                            <th> Status </th>
+                            <th> Submitted On </th>
+                            <th> Updated On </th>
+                            <th> View </th>
+                            <th>More</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
-                            <td> 1 </td>
-                            <td> Herman Beck </td>
-                            <td> $ 77.99 </td>
-                            <td> May 15, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 2 </td>
-                            <td> Messsy Adam </td>
-                            <td> $245.30 </td>
-                            <td> July 1, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 3 </td>
-                            <td> John Richards </td>
-                            <td> $138.00 </td>
-                            <td> Apr 12, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 4 </td>
-                            <td> Peter Meggik </td>
-                            <td> $ 77.99 </td>
-                            <td> May 15, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 5 </td>
-                            <td> Edward </td>
-                            <td> $ 160.25 </td>
-                            <td> May 03, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 6 </td>
-                            <td> John Doe </td>
-                            <td> $ 123.21 </td>
-                            <td> April 05, 2015 </td>
-                          </tr>
-                          <tr>
-                            <td> 7 </td>
-                            <td> Henry Tom </td>
-                            <td> $ 150.00 </td>
-                            <td> June 16, 2015 </td>
-                          </tr>
-                        </tbody>
+                        @foreach ($data as $item)
+
+                          <tbody>
+                            <tr>
+                              <td> {{ $item->DonorDId }} </td>
+                              <td> {{ $item->firstname }} </td>
+                              <td> {{ $item->lastname }} </td>
+                              <td class="badge badge-success"> {{ $item->status }} </td>
+                              <td> {{ $item->created_at }} </td>
+                              <td> {{ $item->updated_at }} </td>
+                              <td><a href="{{ url('/editFormDonor'.$item->DonorDId) }}">Details</a></td>
+                              <td ><a href="{{ url('/deleteApplication'.$item->DonorDId) }}">Withdraw</a></td>
+                            </tr>
+                          </tbody>
+                        @endforeach
                       </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12 stretch-card">
+              {{-- <div class="col-lg-12 stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Table with contextual classes</h4>
@@ -816,15 +930,15 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Kenya Organ Donation Portal 2022</span>
+              
             </div>
           </footer>
           <!-- partial -->

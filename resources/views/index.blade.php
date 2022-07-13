@@ -100,12 +100,12 @@
                             <img src="img/organs3.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Let's be kind</h1>
+                            <h1>Kenya Organ Donation Portal</h1>
                             <p>
                                 Organ donation is a generous, selfless gift
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                                <a class="btn btn-custom" href="/donate">Donate Now</a>
                                 <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                 The donor’s legacy lives on when someone gets a second chance at life.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                                <a class="btn btn-custom" href="/donate">Donate Now</a>
                                 <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                 Every donor can save 8 lives and enhance over 75 more. You Can Help.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn btn-custom" href="">Donate Now</a>
+                                <a class="btn btn-custom" href="/donate">Donate Now</a>
                                 <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/watch?v=K7k4SMeAo9o&ab_channel=LifeSourceMN" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
@@ -217,7 +217,7 @@
                     <p>What We Do?</p>
                     <h2>We believe that we can save more lifes with you</h2>
                 </div>
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="service-item">
                             <div class="service-icon">
@@ -284,7 +284,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <!-- Service End -->
@@ -447,14 +447,14 @@
         
         
         <!-- Donate Start -->
-        <div class="donate" data-parallax="scroll" data-image-src="img/donate.jpg">
+        <div class="donate" data-parallax="scroll" data-image-src="img/organs6.jpg">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <div class="donate-content">
                             <div class="section-header">
                                 <p>Donate Now</p>
-                                <h2>Let's donate to needy people for better lives</h2>
+                                <h2>Let's give Hope to the people for better lives</h2>
                             </div>
                             <div class="donate-text">
                                 <p>
@@ -464,7 +464,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
-                        <div class="donate-form">
+                        {{-- <div class="donate-form">
                             <form>
                                 <div class="control-group">
                                     <input type="text" class="form-control" placeholder="Name" required="required" />
@@ -487,7 +487,7 @@
                                     <button class="btn btn-custom" type="submit">Donate Now</button>
                                 </div>
                             </form>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -898,11 +898,11 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">Kenya Organ Donation Portal</a>, All Right Reserved.</p>
                     </div>
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                         <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

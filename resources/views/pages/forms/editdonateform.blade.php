@@ -358,100 +358,247 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            {{-- <div class="row">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card corona-gradient-card">
-                  <div class="card-body py-0 px-0 px-sm-3">
-                    <div class="row align-items-center">
-                      <div class="col-4 col-sm-3 col-xl-2">
-                        <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
-                      </div>
-                      <div class="col-5 col-sm-7 col-xl-8 p-0">
-                        <h4 class="mb-1 mb-sm-0">Want even more features?</h4>
-                        <p class="mb-0 font-weight-normal d-none d-sm-block">Check out our Pro version with 5 unique layouts!</p>
-                      </div>
-                      <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
-                        <span>
-                          <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade to PRO</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {{-- <div class="page-header">
+              <h3 class="page-title"> Form elements </h3>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+                </ol>
+              </nav>
             </div> --}}
-            
-            
             <div class="row">
-              <div class="col-sm-4 grid-margin">
+              
+              <div class="col-12 grid-margin">
                 <div class="card">
+                  {{-- @if (session()->has('status'))
+                                <div class="text-success" color="green">{{ session()->get('status') }}</div>
+                            @endif --}}
                   <div class="card-body">
-                    <h5>{{time()}}</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">Welcome</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">Active</p>
+                    <h4 class="card-title">Personal Medical Data</h4>
+                    <form action="formupdate{{ $editdata[0]->DonorDId }}" method="POST">
+                      @csrf
+                      <p class="card-description"> Personal info </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">First Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="fname" value="{{ $editdata[0]->firstname }}" />
+                            </div>
+                          </div>
                         </div>
-                        <h6 class="text-muted font-weight-normal">{{ session('firstname') }}</h6>
-                        <h6 class="text-muted font-weight-normal"> {{ session('lastname') }}</h6>
-                        <h6 class="text-muted font-weight-normal">{{ session('email') }}</h6>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Last Name</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="lname" value="{{ $editdata[0]->lastname }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="email" value="{{ $editdata[0]->email }}" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Gender</label>
+                            <div class="col-sm-9">
+                              <select class="form-control"  name="gender">
+                                <option>Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Date of Birth</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" type="date" name="dob" placeholder="dd/mm/yyyy" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Blood Type</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" name="bloodtype">
+                                <option>Select</option>
+                                <option value="A RhD positive(A+)">A RhD positive(A+)</option>
+                                <option value="A RhD negative(A-)">A RhD negative(A-)</option>
+                                <option value="B RhD positive(B+)">B RhD positive(B+)</option>
+                                <option value="B RhD negative(B-)">B RhD negative(B-)</option>
+                                <option value="O RhD positive(O+">O RhD positive(O+)</option>
+                                <option value="O RhD positive(O-)">O RhD positive(O-)</option>
+                                <option value="AB RhD positive(AB+)">AB RhD positive(AB+)</option>
+                                <option value="AB RhD negative(AB-)">AB RhD negative(AB-)</option>
+                                
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Do You Have any Infectious Diseases?(e.g. HIV, Spreading Cancer)</label>
+                            <div class="col-sm-4">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="choice" id="membershipRadios1" value="YES" > YES </label>
+                              </div>
+                            </div>
+                            <div class="col-sm-5">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="radio" class="form-check-input" name="choice" id="membershipRadios2" value="NO"> NO </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Type Of Donation</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" name="donationtype">
+                                <option >Select</option>
+                                <option value="Living Donation">Living Donation</option>
+                                <option value="Deceased Donation">Deceased Donation</option>
+                                <option value="Tissue Donation">Tissue Donation</option>
+                                <option value="Vascularized Composite Allografts (VCA)">Vascularized Composite Allografts (VCA)</option>
+                                <option value="Pedriatic Donation">Pedriatic Donation</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Height (cm)</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="height" value="{{ $editdata[0]->height }}" />
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Transplantable Organs (Details and conditions in the documentation page)</label>
+                        <div class="col-sm-9">
+                          <select class="form-control" name="organtype">
+                            <option>Select</option>
+                            <option>Choose Later</option>
+                            <option value="Liver">Liver</option>
+                            <option value="Kidney">Kidney</option>
+                            <option value="Pancreas">Pancreas</option>
+                            <option value="Heart">Heart</option>
+                            <option value="Lung">Lung</option>
+                            <option value="Intestine">Intestine</option>
+                            <option value="Corneas">Corneas</option>
+                            <option value="Middle ear">Middle ear</option>
+                            <option value="Skin">Skin</option>
+                            <option value="Bone">Bone</option>
+                            <option value="Heart Valves">Heart Valves</option>
+                            <option value="Connective tissue">Connective tissue</option>
+                            <option value="Vascularized composite allografts">Vascularized composite allografts (transplant of several structures that may include skin, uterus, bone, muscles, blood vessels, nerves and connective tissue)</option>
+                            
+                          </select>
+                        </div>
+                      </div>
+                      <p class="card-description"> Address </p>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Address 1</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="address1" value="{{ $editdata[0]->address1 }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">State</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="state" value="{{ $editdata[0]->state }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Address 2</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="address2" value="{{ $editdata[0]->address2 }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Phone Number</label>
+                            <div class="col-sm-9">
+                              <input type="tel" class="form-control" name="phonenumber" value="{{ $editdata[0]->phonenumber }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Postcode</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="postalcode" value="{{ $editdata[0]->postalcode }}" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">City</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" name="city" value="{{ $editdata[0]->city }}" />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Country</label>
+                            <div class="col-sm-9">
+                              <select class="form-control" name="country">
+                                <option value="Kenya">Kenya</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <hr>
+                      <p>(A preliminary medical examination will be carried out to guarantee your compatibility.)</>
+                      <p>(All this Data will be analyzed and verified by the hospital which will contact you.)</p>
+                      <p>(Some Information given may be modified by you even after sending the form.)</p>
+                      <p>(You have the right to withdraw your application.)</p>
+                      <p> (Any false information will cause your account to be Suspended.)</p>
+                      <p> (Please review the form before submitting.) </p><br>
+                      <button type="submit" class="btn btn-primary btn-icon-text">
+                        <i class="mdi mdi-file-check btn-icon-prepend"></i> Edit </button>
+                    </form>
                   </div>
                 </div>
               </div>
-              {{-- <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Sales</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$45850</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+8.3%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal"> 9.61% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-wallet-travel text-danger ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> --}}
-              {{-- <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Purchase</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$2039</h2>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">-2.1% </p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">2.27% Since last month</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-monitor text-success ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> --}}
+              
             </div>
-            
-            
-            
           </div>
           <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
+          <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright @ Kenya Organ Donation Portal 2022</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Kenya Organ Donation Portal 2022</span>
               
             </div>
           </footer>
@@ -463,24 +610,23 @@
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
-    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="assets/vendors/chart.js/Chart.min.js"></script>
-    <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
-    <script src="assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <script src="../../assets/vendors/select2/select2.min.js"></script>
+    <script src="../../assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="assets/js/off-canvas.js"></script>
-    <script src="assets/js/hoverable-collapse.js"></script>
-    <script src="assets/js/misc.js"></script>
-    <script src="assets/js/settings.js"></script>
-    <script src="assets/js/todolist.js"></script>
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <script src="../../assets/js/settings.js"></script>
+    <script src="../../assets/js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="assets/js/dashboard.js"></script>
+    <script src="../../assets/js/file-upload.js"></script>
+    <script src="../../assets/js/typeahead.js"></script>
+    <script src="../../assets/js/select2.js"></script>
     <!-- End custom js for this page -->
   </body>
 </html>

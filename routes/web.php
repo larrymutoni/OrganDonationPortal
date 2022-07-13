@@ -46,7 +46,11 @@ Route::get('profile', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('isLoggedIn');
 Route::get('/donateform', [DonateController::class, 'index2']);
 Route::POST('/donateregistration', [DonateController::class, 'store']);
-
+Route::get('/showSubmitted', [DonateController::class, 'show']);
+Route::get('/show', [DonateController::class, 'show']);
+Route::get('/editFormDonor{id}', [DonateController::class, 'update']);
+Route::post('/formupdate{id}', [DonateController::class, 'edit']);
+Route::get('/deleteApplication{id}', [DonateController::class, 'destroy']);
 
 Route::get('logout', function () {
     session()->flush();
