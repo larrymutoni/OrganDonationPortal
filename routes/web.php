@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CausesController;
 use App\Http\Controllers\ContactController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginHospitalsController;
 use App\Http\Controllers\RegisterHospitalsController;
 use App\Http\Controllers\RegistrationDonorsController;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/home', [HomeController::class, 'index']);
@@ -52,6 +54,17 @@ Route::get('/editFormDonor{id}', [DonateController::class, 'update']);
 Route::post('/formupdate{id}', [DonateController::class, 'edit']);
 Route::get('/deleteApplication{id}', [DonateController::class, 'destroy']);
 
+Route::get('/AdminLogin', [AdminController::class, 'index']);
+Route::post('/logAdmin', [AdminController::class, 'login']);
+Route::get('/adminsdata', [AdminController::class, 'viewAdminsData']);
+Route::get('/AdminAddForm', [AdminController::class, 'addAdmins']);
+Route::post('/addNewAdmin', [AdminController::class, 'store']);
+Route::get('/deleteAdmin{id}', [AdminController::class, 'destroy']);
+Route::get('/donorsApplications', [AdminController::class, 'donorsdata']);
+Route::get('/deleteDonorApplication{id}', [AdminController::class, 'deleteApplication']);
+Route::get('/usersData', [AdminController::class, 'usersdata']);
+
+Route::get('/AdminDashboard', [AdminController::class, 'dashboard'])->middleware('isLoggedIn');
 Route::get('logout', function () {
     session()->flush();
     return redirect('home');

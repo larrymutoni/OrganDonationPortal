@@ -99,8 +99,8 @@
                         <h2>Donate Now</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Home</a>
-                        <a href="">Donate</a>
+                        <a href="">Login</a>
+                        <a href="">Register</a>
                     </div>
                 </div>
             </div>
@@ -164,6 +164,10 @@
                             <p></p>
                             <div>
                                 <a href="/register"><button class="btn btn-custom" type="text">Click Here To Register</button></a>
+                            </div>
+                            <p></p>
+                            <div>
+                                <a href="/AdminLogin"><button class="btn btn-custom" type="text">System Admins ONLY</button></a>
                             </div>
                         </div>
                     </div>
